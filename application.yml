@@ -1,0 +1,10 @@
+# used if not using docker compose, otherwise not used
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mediscreenPostGres
+    username: postgres
+    password: P31PdPu3131!
+    driver-class-name: org.postgresql.Driver
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mediscreenMongo 
