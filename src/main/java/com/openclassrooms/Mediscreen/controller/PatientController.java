@@ -2,7 +2,6 @@ package com.openclassrooms.Mediscreen.controller;
 
 import java.util.List;
 
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +15,6 @@ import org.tinylog.Logger;
 
 import com.openclassrooms.Mediscreen.domain.Note;
 import com.openclassrooms.Mediscreen.domain.Patient;
-import com.openclassrooms.Mediscreen.repository.PatientHistoryRepository;
-import com.openclassrooms.Mediscreen.repository.PatientRepository;
 import com.openclassrooms.Mediscreen.service.PatientHistoryService;
 import com.openclassrooms.Mediscreen.service.PatientService;
 

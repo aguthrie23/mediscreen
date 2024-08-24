@@ -1,6 +1,5 @@
 package com.openclassrooms.Mediscreen.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TriggerTerms {
@@ -10,7 +9,6 @@ public class TriggerTerms {
     ("Hemoglobin A1C","Microalbumin","Body Height","Body Weight","Smoker",
     "Abnormal","Cholesterol","Dizziness","Relapse","Reaction","Antibodies");
 	
-
 	public static List<String> getTriggerterms() {
 		return triggerTerms;
 	}

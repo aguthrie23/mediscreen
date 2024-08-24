@@ -1,14 +1,10 @@
 package com.openclassrooms.Mediscreen;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.openclassrooms.Mediscreen.domain.Patient;
 import com.openclassrooms.Mediscreen.repository.PatientRepository;

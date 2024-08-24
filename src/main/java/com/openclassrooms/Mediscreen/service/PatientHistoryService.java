@@ -6,9 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.type.filter.AbstractClassTestingTypeFilter;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.tinylog.Logger;
@@ -19,7 +17,6 @@ import com.openclassrooms.Mediscreen.domain.TriggerTerms;
 import com.openclassrooms.Mediscreen.exception.DataNotFoundException;
 import com.openclassrooms.Mediscreen.repository.PatientHistoryRepository;
 
-import ch.qos.logback.core.joran.conditional.IfAction;
 
 @Service
 public class PatientHistoryService {
@@ -183,12 +180,13 @@ public class PatientHistoryService {
 	private Integer getCountTriggerTerms(List<Note> retNotes) {
 		int count=0;
 		List <String> triggerTermList = TriggerTerms.getTriggerterms();
-		outerLoop:
+	   //	outerLoop:
 		for (Note note : retNotes) {
 		  for (String termsString : triggerTermList) {
 			if (note.getMessage().toLowerCase().contains(termsString.toLowerCase())) {
 				count++;
-				Logger.debug("note qualifies " + note.getMessage());
+				Logger.debug("note qualifies with Term " +  termsString.toLowerCase() + 
+						" full note message " + note.getMessage());
 				//break;
 				// continue outerLoop;
 			}

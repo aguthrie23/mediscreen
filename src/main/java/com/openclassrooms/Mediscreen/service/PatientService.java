@@ -1,13 +1,10 @@
 package com.openclassrooms.Mediscreen.service;
 
-import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.tinylog.Logger;
+
 
 import com.openclassrooms.Mediscreen.domain.Patient;
 import com.openclassrooms.Mediscreen.exception.DataNotFoundException;
@@ -30,28 +27,22 @@ public class PatientService {
 	
 	public Patient addPatient(Patient patient) {
 		
-	//	System.out.println(patient.getDateOfBirth());
 		return this.patientRepository.save(patient);
 	}	
 	
 	public Patient getByFamilyName(String name) {
 		
-	//	Logger.info("GET findByFamilyName called with param name " + name);
 		
 		return this.patientRepository.findByFamilyName(name);
 	}	
 	
 	public Patient getById(Long  id) {
 		
-		//Logger.info("GET findByFamilyName called with param name " + id);
-		
 		return this.patientRepository.findById(id);
 	}
 	
 	public Patient getByFirstLast(String  givenName, 
 			String  familyName) {
-		
-	//	Logger.info("GET getByFirstLast called with param name " + givenName + " " + familyName);
 		
 		
 		return this.patientRepository.findByFirstLast(givenName, familyName);
