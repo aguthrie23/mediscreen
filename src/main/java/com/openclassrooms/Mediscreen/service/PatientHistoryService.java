@@ -116,7 +116,7 @@ public class PatientHistoryService {
 		} catch (DataNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return e.getMessage();
 		}
 		
 	}
@@ -209,10 +209,10 @@ public class PatientHistoryService {
 		} catch (DataNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return e.getMessage();
 		} catch (Exception e) {
 			e.printStackTrace();
-			return null;
+			 return e.getMessage();
 		}
 		
 		

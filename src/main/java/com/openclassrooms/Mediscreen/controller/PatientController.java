@@ -33,7 +33,7 @@ public class PatientController {
 	
 
 	// Post a Note and return Response
-	@PostMapping("/addNote")
+	@PostMapping("/patHistory/add")
 	public ResponseEntity<String> addNote(@RequestBody Note note) {
 		
 		Logger.info("POST Add History Called");
