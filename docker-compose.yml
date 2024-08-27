@@ -12,7 +12,7 @@ services:
    environment:
     SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mediscreenPostGres
     SPRING_DATASOURCE_USERNAME: postgres
-    SPRING_DATASOURCE_PASSWORD: P31PdPu3131!
+    SPRING_DATASOURCE_PASSWORD: ${DATABASE_PASSWORD}
     SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/mediscreenMongo
   db:
    image: postgres:12.19-alpine3.20
@@ -20,7 +20,7 @@ services:
     - 5432:5432
    environment:
     POSTGRES_USER: postgres
-    POSTGRES_PASSWORD: P31PdPu3131!
+    POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     POSTGRES_DB: mediscreenPostGres
    volumes:
     - postgres_data:/var/lib/postgresql/data
